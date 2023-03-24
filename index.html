@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUANTICuiz</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <!-- FONT -->
+
+</head>
+
+<body>
+
+    <header>
+        <a href="http://localhost:1234/" id="logo"><span>QUANTI</span>Cuiz</a>
+        <ul>
+            <li id="menuQuiz1">Quiz1</li>
+            <li>Quiz2</li>
+        </ul>
+    </header>
+
+
+
+    <main>
+        <section class="quizPlanete">
+
+            <!-- VIDEO de FOND -->
+            <div id="videoQuizPlanete">
+                <video autoplay muted src="./img/backgroundSolarSystem.mp4" onended="this.currentTime=0;"></video>
+            </div>
+            <!-- VIDEO de FOND -->
+
+            <div class="boxQuizPlanete">
+
+
+
+                <button id="close-btn">X</button>
+                <!-- Fermer la section quiz avec le bouton X -->
+
+
+
+                <h1>Sujet du Quiz : notre système solaire</h1>
+
+                <div class="boxQuestion">
+                    <p class="questionNum" id="questionNum">Question : <span id="questionNumIncrementation">1</span> /
+                        12
+                    </p>
+                    <p class="question" id="question"><!-- Combien y a-t-il de planètes dans notre système solaire ?-->
+                    </p>
+
+                    <!-- Compte à rebours -->
+                        <p class="compteRebours"><span id="compteReboursDecrementation">10</span></p>
+
+                </div>
+
+                <!-- DIV QUI CONTIENT LES 4 CHOIX DE REPONSES -->
+                <div class="boxChoixReponses" id="boxChoixReponses">
+                    <ul>
+                        <li class="choixReponses gradient"></li>
+                        <li class="choixReponses gradient"></li>
+                        <li class="choixReponses gradient"></li>
+                        <li class="choixReponses gradient"></li>
+                    </ul>
+                </div>
+
+                <!-- DIV QUI CONTIENT LA RÉPONSE et qui cache les 4 choix -->
+                <div class="boxReponse" id="boxReponse">
+                    <p class="goodBad" id="goodBad"><!-- Bien joué ! 'ou' Eh non...--></p>
+                    <p class="reponse" id="reponse"><!-- Voici la réponse. --></p>
+                </div>
+
+                <button class="validBtn" id="validBtn">Valider<!-- Valider --></button>
+                <button class="nextQuestionBox" id="nextQuestionBox">Question suivante<!-- Suivant --></button>
+
+                <p id="score">Score : <span id="scoreIncrementation">0</span> / <span
+                        id="scoreLevelIncrementation">1</span></p>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script.ts"></script>
+</body>
+
+</html>
